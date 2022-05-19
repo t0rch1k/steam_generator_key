@@ -1,6 +1,9 @@
 import random
-
-print('''
+import secrets
+from colorama import init, Fore, Back, Style
+import random
+init()
+print(Fore.GREEN +'''
 ████████╗░█████╗░██████╗░░█████╗░██╗░░██╗██╗██╗░░██╗
 ╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗██║░░██║██║██║░██╔╝
 ░░░██║░░░██║░░██║██████╔╝██║░░╚═╝███████║██║█████═╝░
@@ -33,22 +36,22 @@ def Type_A_B ():
     Var_c = genera()
     Var_qwerr=Var_a + "-" + Var_b + "-" + Var_c
     return(Var_qwerr)
-
-Vibor = int(input("Введите вариант и нажмите Enter: "))
+init()
+Vibor = int(input(Fore.GREEN +"Введите вариант и нажмите Enter: "))
 arr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
        "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 arr2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 if Vibor == 1:
-    qwe = int(input("Введите количество ключей: "))
+    qwe = int(input(Fore.GREEN +"Введите количество ключей: "))
     file = open(str(qwe) + "Keys.txt", "w")
     qwer = 0
     while (qwer < qwe):
         qwer += 1
         file.write(Type_A_B()+"\n")
         print(str(qwer)+" complete")
-    input("Для завершения нажмите Enter.")
+    input(Fore.YELLOW +"Для завершения нажмите Enter")
 elif Vibor == 2:
-    qwe = int(input("Введите количество ключей: "))
+    qwe = int(input(Fore.GREEN +"Введите количество ключей: "))
     file = open(str(qwe) + "Keys.txt", "w")
     qwer = 0
     while (qwer < qwe):
@@ -57,9 +60,9 @@ elif Vibor == 2:
         Var_e = genera()
         file.write(Type_A_B() + "-" + Var_d + "-" + Var_e + "\n")
         print(str(qwer) + " complete")
-    input("Для завершения нажмите Enter.")
+    input(Fore.YELLOW +"Для завершения нажмите Enter.")
 elif Vibor == 3:
-    qwe = int(input("Введите количество ключей:"))
+    qwe = int(input(Fore.GREEN +"Введите количество ключей:"))
     file = open(str(qwe) + "Keys.txt", "w")
     qwer = 0
     while (qwer < qwe):
@@ -69,6 +72,6 @@ elif Vibor == 3:
         Var_c = genera()
         file.write(Var_a + Var_b + Var_c + " " + genera2()+"\n")
         print(str(qwer) + " complete")
-    input("Для завершения нажмите Enter.")
+    input(Fore.YELLOW +"Для завершения нажмите Enter")
 else:
-    print("Выввели не верное число.")
+    print(Fore.RED +"Выввели не верное число")
